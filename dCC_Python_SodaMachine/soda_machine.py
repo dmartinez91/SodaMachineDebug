@@ -1,4 +1,7 @@
 
+from cans import Can
+from coins import Coin
+
 
 class SodaMachine:
     def __init__(self):
@@ -8,22 +11,22 @@ class SodaMachine:
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
         for index in range(8):
-            self.register.append(coins.Quarter())
+            self.register.append(Coin.Quarter())
         for index in range(10):
-            self.register.append(coins.Dime())
+            self.register.append(Coin.Dime())
         for index in range(20):
-            self.register.append(coins.Nickel())
+            self.register.append(Coin.Nickel())
         for index in range(50):
-            self.register.append(coins.Penny())
+            self.register.append(Coin.Penny())
 
     def fill_inventory(self):
         """Method will fill SodaMachine's cans list with certain amounts of each can when called."""
         for index in range(10):
-            self.inventory.append(cans.Cola())
+            self.inventory.append(Can.Cola())
         for index in range(10):
-            self.inventory.append(cans.OrangeSoda())
+            self.inventory.append(Can.OrangeSoda())
         for index in range(10):
-            self.inventory.append(cans.RootBeer())
+            self.inventory.append(Can.RootBeer())
 
     def begin_transaction(self, customer):
         """Method is complete. Initiates purchase if user decides to proceed. No errors."""

@@ -1,6 +1,6 @@
 from customer import Customer
 from soda_machine import SodaMachine
-from user_interface import User_Interface
+import user_interface 
 
 class Simulation:
     def __init__(self):
@@ -10,8 +10,8 @@ class Simulation:
         """The central method called in main.py."""
         customer = Customer()
         soda_machine = SodaMachine()
-        user_interface = User_Interface()
-        will_proceed = False
+        will_proceed = True
+        
         while will_proceed:
             user_option = user_interface.simulation_main_menu()
             if user_option == "1":
