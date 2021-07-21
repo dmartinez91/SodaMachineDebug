@@ -1,6 +1,7 @@
 from wallet import Wallet
 from backpack import Backpack
 
+
 class Customer:
     def __init__(self):
         self.wallet = Wallet()
@@ -56,7 +57,7 @@ class Customer:
             elif coin.name == "Penny":
                 coins_quantity[3] -= 1
         total_value = round(total_value, -2)
-        user_interface.display_customer_wallet_info(coins_quantity, total_value)
+        self.user_interface.display_customer_wallet_info(coins_quantity, total_value)
 
     def check_backpack():
         """Will display the cans contained in purchased_cans list in backpack"""
@@ -65,3 +66,8 @@ class Customer:
         else:
             for can in backpack.purchased_cans:
                 user_interface.output_text(can.name)
+
+
+# test = Customer()
+
+# test.gather_coins_from_wallet()
