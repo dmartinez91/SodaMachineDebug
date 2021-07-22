@@ -6,19 +6,19 @@ class Coin:
 
 class Dime(Coin):
     def __init__(self):
-        super().__init__("Dime", 0.10)
+        super(Dime, self).__init__("Dime", 0.10)
 
 
 class Nickel(Coin):
     def __init__(self):
-        super().__init__("Nickel", 0.05)
+        super(Nickel, self).__init__("Nickel", 0.05)
 
 
 class Penny(Coin):
     def __init__(self):
-        super().__init__("Penny", 0.01)
+        super(Penny, self).__init__("Penny", 0.01)
 
 
 class Quarter(Coin):
     def __init__(self):
-        super().__init__("Quarter", 0.25)
+        super(Quarter, self).__init__("Quarter", 0.25)

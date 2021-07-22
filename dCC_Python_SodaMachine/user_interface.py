@@ -75,6 +75,8 @@ def soda_selection(inventory):
     soda_options = get_unique_can_names(inventory)
     while validated_user_selection[0] is False:
         print("Please choose from the following options:")
+        #added soda options to print so user can select from available list
+        print(soda_options)
         i = 1
         for can in soda_options:
             print("\n\tEnter -{i}- for {can} : ${can.price}")
@@ -158,6 +160,6 @@ def validate_coin_selection(selection):
 
 def end_message(soda_name, change_amount):
     """Closing message displaying name of soda purchased and amount of change returned"""
-    print(f'Enjoy your {soda}')
+    print(f'Enjoy your {soda_name}')
     if change_amount >= 0:
         print(f'Dispensing ${change_amount}')
