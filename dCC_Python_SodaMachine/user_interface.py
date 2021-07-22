@@ -1,7 +1,5 @@
-# from _typeshed import Self
+
 import os
-
-
 
 
 def simulation_main_menu():
@@ -75,12 +73,10 @@ def soda_selection(inventory):
     soda_options = get_unique_can_names(inventory)
     while validated_user_selection[0] is False:
         print("Please choose from the following options:")
-        #added soda options to print so user can select from available list
-        print(soda_options)
         i = 1
         for can in soda_options:
-            print("\n\tEnter -{i}- for {can} : ${can.price}")
-            i =+ 1
+            print(f"\n\tEnter -{i}- for {can.name} : ${can.price}")
+            i += 1
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
     return validated_user_selection[1]
@@ -107,6 +103,7 @@ def get_unique_can_names(inventory):
     """Loops through inventory to create a list of all distinct types of sodas available. No errors."""
     unique_cans = []
     previous_names = []
+    
     for can in inventory:
         if can.name in previous_names:
             continue
