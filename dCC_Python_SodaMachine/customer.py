@@ -72,3 +72,6 @@ class Customer:
 # test = Customer()
 
 # test.gather_coins_from_wallet()
+
+
+#problems in get change, logic problems. check backpack inventory has a problem, getting soda out of machine, small issue under the price. 
